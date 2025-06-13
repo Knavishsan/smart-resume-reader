@@ -1,14 +1,24 @@
 
 import React, { useState } from 'react';
-import { Brain, Menu, X, ArrowLeft } from 'lucide-react';
+import { Brain, Menu, X, ArrowLeft, User, LogOut, Book } from 'lucide-react';
 
 interface NavigationProps {
   onAnalyzeClick?: () => void;
   onBack?: () => void;
   showBack?: boolean;
+  currentUser?: any;
+  onSignOut?: () => void;
+  onDocsClick?: () => void;
 }
 
-export const Navigation: React.FC<NavigationProps> = ({ onAnalyzeClick, onBack, showBack }) => {
+export const Navigation: React.FC<NavigationProps> = ({ 
+  onAnalyzeClick, 
+  onBack, 
+  showBack, 
+  currentUser, 
+  onSignOut,
+  onDocsClick 
+}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -43,17 +53,43 @@ export const Navigation: React.FC<NavigationProps> = ({ onAnalyzeClick, onBack, 
                 <a href="#how-it-works" className="text-gray-300 hover:text-white transition-colors">How it Works</a>
                 <a href="#pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</a>
                 <a href="#faq" className="text-gray-300 hover:text-white transition-colors">FAQ</a>
+                <button 
+                  onClick={onDocsClick}
+                  className="text-gray-300 hover:text-white transition-colors flex items-center space-x-1"
+                >
+                  <Book className="h-4 w-4" />
+                  <span>Docs</span>
+                </button>
               </div>
 
               <div className="hidden md:flex items-center space-x-4">
-                <button className="text-gray-300 hover:text-white transition-colors">
-                  Sign In
-                </button>
+                {currentUser ? (
+                  <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-2 bg-gray-800 px-4 py-2 rounded-lg">
+                      <User className="h-4 w-4 text-blue-400" />
+                      <span className="text-sm text-gray-300">{currentUser.name}</span>
+                      {currentUser.isAdmin && (
+                        <span className="bg-purple-600 text-white text-xs px-2 py-1 rounded">Admin</span>
+                      )}
+                    </div>
+                    <button
+                      onClick={onSignOut}
+                      className="text-gray-300 hover:text-white transition-colors flex items-center space-x-1"
+                    >
+                      <LogOut className="h-4 w-4" />
+                      <span>Sign Out</span>
+                    </button>
+                  </div>
+                ) : (
+                  <button className="text-gray-300 hover:text-white transition-colors">
+                    Sign In
+                  </button>
+                )}
                 <button
                   onClick={onAnalyzeClick}
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg transition-all duration-300 transform hover:scale-105"
                 >
-                  Analyze Resume
+                  {currentUser?.isAdmin ? 'Dashboard' : 'Analyze Resume'}
                 </button>
               </div>
 
@@ -65,6 +101,17 @@ export const Navigation: React.FC<NavigationProps> = ({ onAnalyzeClick, onBack, 
               </button>
             </>
           )}
+
+          {/* Mobile user info */}
+          {showBack && currentUser && (
+            <div className="md:hidden flex items-center space-x-2">
+              <User className="h-4 w-4 text-blue-400" />
+              <span className="text-sm text-gray-300">{currentUser.name}</span>
+              {currentUser.isAdmin && (
+                <span className="bg-purple-600 text-white text-xs px-2 py-1 rounded">Admin</span>
+              )}
+            </div>
+          )}
         </div>
 
         {isMenuOpen && !showBack && (
@@ -74,14 +121,42 @@ export const Navigation: React.FC<NavigationProps> = ({ onAnalyzeClick, onBack, 
               <a href="#how-it-works" className="text-gray-300 hover:text-white transition-colors">How it Works</a>
               <a href="#pricing" className="text-gray-300 hover:text-white transition-colors">Pricing</a>
               <a href="#faq" className="text-gray-300 hover:text-white transition-colors">FAQ</a>
-              <button className="text-gray-300 hover:text-white transition-colors text-left">
-                Sign In
+              <button 
+                onClick={onDocsClick}
+                className="text-gray-300 hover:text-white transition-colors text-left flex items-center space-x-1"
+              >
+                <Book className="h-4 w-4" />
+                <span>Documentation</span>
               </button>
+              
+              {currentUser ? (
+                <div className="space-y-4 pt-4 border-t border-gray-700">
+                  <div className="flex items-center space-x-2">
+                    <User className="h-4 w-4 text-blue-400" />
+                    <span className="text-sm text-gray-300">{currentUser.name}</span>
+                    {currentUser.isAdmin && (
+                      <span className="bg-purple-600 text-white text-xs px-2 py-1 rounded">Admin</span>
+                    )}
+                  </div>
+                  <button
+                    onClick={onSignOut}
+                    className="text-gray-300 hover:text-white transition-colors text-left flex items-center space-x-1"
+                  >
+                    <LogOut className="h-4 w-4" />
+                    <span>Sign Out</span>
+                  </button>
+                </div>
+              ) : (
+                <button className="text-gray-300 hover:text-white transition-colors text-left">
+                  Sign In
+                </button>
+              )}
+              
               <button
                 onClick={onAnalyzeClick}
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg w-full"
               >
-                Analyze Resume
+                {currentUser?.isAdmin ? 'Dashboard' : 'Analyze Resume'}
               </button>
             </div>
           </div>

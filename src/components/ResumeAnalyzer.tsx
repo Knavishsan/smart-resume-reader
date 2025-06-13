@@ -48,6 +48,23 @@ export const ResumeAnalyzer = () => {
     try {
       const result = await analyzeResume(resumeText, "");
       setAnalysis(result);
+      
+      // Update user's resume count
+      const currentUser = JSON.parse(localStorage.getItem('currentUser') || '{}');
+      if (currentUser.id && !currentUser.isAdmin) {
+        const users = JSON.parse(localStorage.getItem('users') || '[]');
+        const updatedUsers = users.map((u: any) => 
+          u.id === currentUser.id 
+            ? { ...u, resumesAnalyzed: (u.resumesAnalyzed || 0) + 1, lastActive: new Date().toISOString() }
+            : u
+        );
+        localStorage.setItem('users', JSON.stringify(updatedUsers));
+        
+        // Update current user in localStorage
+        const updatedCurrentUser = { ...currentUser, resumesAnalyzed: (currentUser.resumesAnalyzed || 0) + 1 };
+        localStorage.setItem('currentUser', JSON.stringify(updatedCurrentUser));
+      }
+      
       toast({
         title: "Analysis Complete",
         description: "Your resume has been analyzed successfully!",
