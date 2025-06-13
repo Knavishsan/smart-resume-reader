@@ -2,7 +2,7 @@
 
 ## Project Info
 
-**GitHub URL**: https://smart-resume-reader.vercel.app/
+**visit at**: https://smart-resume-reader.vercel.app/
 
 ## How Can I Edit This Code?
 
@@ -43,8 +43,8 @@ Click "New codespace" to launch an editing environment
 
 Make changes and commit them directly
 
-#Technologies Used
-#This project is built with:
+Technologies Used
+This project is built with:
 
 Vite
 
