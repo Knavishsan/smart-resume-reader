@@ -2,7 +2,7 @@
 
 ## Project Info
 
-**visit at**: https://smart-resume-reader.vercel.app/
+**URL**: https://smart-resume-reader.vercel.app/
 
 ## How Can I Edit This Code?
 
@@ -14,7 +14,7 @@ To work locally using your own IDE, follow these steps:
 
 ```sh
 # Step 1: Clone the repository using the Git URL
-git clone https://github.com/Ahmadjamil888/smart-resume-reader
+git clone https://github.com/Ahmadjamil888/smart-resume-reader.git
 
 # Step 2: Navigate to the project directory
 cd smart-resume-reader
@@ -25,47 +25,48 @@ npm i
 # Step 4: Start the development server
 npm run dev
 ```
-2. Edit Files Directly in GitHub
-Navigate to the desired file(s)
 
-Click the "Edit" button at the top right of the file view
+### 2. Edit Files Directly in GitHub
 
-Make your changes and commit them
+- Navigate to the desired file(s)
+- Click the "Edit" button at the top right of the file view
+- Make your changes and commit them
 
-3. Use GitHub Codespaces
-Go to the main page of your repository
+### 3. Use GitHub Codespaces
 
-Click on the "Code" button
+- Go to the main page of your repository
+- Click on the "Code" button
+- Select the "Codespaces" tab
+- Click "New codespace" to launch an editing environment
+- Make changes and commit them directly
 
-Select the "Codespaces" tab
+## Technologies Used
 
-Click "New codespace" to launch an editing environment
-
-Make changes and commit them directly
-
-Technologies Used
 This project is built with:
 
-Vite
+- Vite  
+- TypeScript  
+- React  
+- shadcn-ui  
+- Tailwind CSS  
 
-TypeScript
+## Deployment
 
-React
-
-shadcn-ui
-
-Tailwind CSS
-
-Deployment
 You can deploy this project using platforms like:
 
-Vercel
+- Vercel
+- Netlify
+- GitHub Pages
+- Your own custom server
 
-Netlify
+## Custom Domain
 
-GitHub Pages
-
-Your own custom server
-
-Custom Domain
 To use a custom domain, refer to your hosting platform's documentation for connecting a domain to your deployed project.
+
+## Environment Variables
+
+To use this project, create a `.env` file in the root directory and add your Gemini API key:
+
+```
+VITE_GEMINI_API_KEY=your_gemini_api_key_here
+```
