@@ -1,73 +1,71 @@
-# Welcome to your Lovable project
+# AI Resume Analyzer
 
-## Project info
+## Project Info
 
-**URL**: https://lovable.dev/projects/c3efcf9a-e6f3-422f-850b-32502b0648f7
+**GitHub URL**: https://smart-resume-reader.vercel.app/
 
-## How can I edit this code?
+## How Can I Edit This Code?
 
-There are several ways of editing your application.
+There are several ways to edit your application:
 
-**Use Lovable**
+### 1. Use Your Preferred IDE
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c3efcf9a-e6f3-422f-850b-32502b0648f7) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+To work locally using your own IDE, follow these steps:
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Step 1: Clone the repository using the Git URL
+git clone https://github.com/Ahmadjamil888/smart-resume-reader
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Step 2: Navigate to the project directory
+cd smart-resume-reader
 
-# Step 3: Install the necessary dependencies.
+# Step 3: Install the necessary dependencies
 npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Step 4: Start the development server
 npm run dev
 ```
+2. Edit Files Directly in GitHub
+Navigate to the desired file(s)
 
-**Edit a file directly in GitHub**
+Click the "Edit" button at the top right of the file view
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Make your changes and commit them
 
-**Use GitHub Codespaces**
+3. Use GitHub Codespaces
+Go to the main page of your repository
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Click on the "Code" button
 
-## What technologies are used for this project?
+Select the "Codespaces" tab
 
-This project is built with:
+Click "New codespace" to launch an editing environment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Make changes and commit them directly
 
-## How can I deploy this project?
+#Technologies Used
+#This project is built with:
 
-Simply open [Lovable](https://lovable.dev/projects/c3efcf9a-e6f3-422f-850b-32502b0648f7) and click on Share -> Publish.
+Vite
 
-## Can I connect a custom domain to my Lovable project?
+TypeScript
 
-Yes, you can!
+React
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+shadcn-ui
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Tailwind CSS
+
+Deployment
+You can deploy this project using platforms like:
+
+Vercel
+
+Netlify
+
+GitHub Pages
+
+Your own custom server
+
+Custom Domain
+To use a custom domain, refer to your hosting platform's documentation for connecting a domain to your deployed project.
