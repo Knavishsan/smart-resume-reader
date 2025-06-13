@@ -4,6 +4,9 @@
 
 **URL**: https://smart-resume-reader.vercel.app/
 
+<img src="https://github.com/user-attachments/assets/4bc55d96-099d-4861-a7eb-e32b9d856872](https://raw.githubusercontent.com/Ahmadjamil888/smart-resume-reader/refs/heads/main/public/Screenshot%202025-06-13%20214615.png">
+
+
 ## How Can I Edit This Code?
 
 There are several ways to edit your application:
@@ -25,7 +28,7 @@ npm i
 # Step 4: Start the development server
 npm run dev
 ```
-
+<img src="https://github.com/user-attachments/assets/4bc55d96-099d-4861-a7eb-e32b9d856872](https://raw.githubusercontent.com/Ahmadjamil888/smart-resume-reader/refs/heads/main/public/Screenshot%202025-06-13%20214707.png">
 ### 2. Edit Files Directly in GitHub
 
 - Navigate to the desired file(s)
